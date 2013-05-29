@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>css-brush-up by scott0707</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>css-brush-up</h1>
+        <p>CSS Brush Up - Specific to AE</p>
+        <p class="view"><a href="https://github.com/scott0707/css-brush-up">View the Project on GitHub <small>scott0707/css-brush-up</small></a></p>
+        <ul>
+          <li><a href="https://github.com/scott0707/css-brush-up/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/scott0707/css-brush-up/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/scott0707/css-brush-up">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="css-brush-up" class="anchor" href="#css-brush-up"><span class="octicon octicon-link"></span></a>CSS Brush Up</h1>
+
+<p><a href="https://github.com/aeo/style-guide">https://github.com/aeo/style-guide</a></p>
+
+<p>Scott Kehr</p>
+
+<h2>
+<a name="which-block-is-more-expensive" class="anchor" href="#which-block-is-more-expensive"><span class="octicon octicon-link"></span></a>Which block is more expensive?</h2>
+
+<div class="highlight"><pre><span class="nt">body</span> <span class="nc">.myClass</span> <span class="nt">div</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="nt">body</span> <span class="nt">div</span> <span class="nc">.myClass</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="css-processes-right-to-left" class="anchor" href="#css-processes-right-to-left"><span class="octicon octicon-link"></span></a>CSS processes right to left</h3>
+
+<p>Make sure far right element is specific.</p>
+
+<h1>
+<a name="scalable-css" class="anchor" href="#scalable-css"><span class="octicon octicon-link"></span></a>Scalable CSS</h1>
+
+<h3>
+<a name="wrong-way" class="anchor" href="#wrong-way"><span class="octicon octicon-link"></span></a>Wrong Way</h3>
+
+<div class="highlight"><pre><span class="nc">.arial</span> <span class="p">{</span>
+  <span class="k">font</span><span class="o">:</span> <span class="k">normal</span> <span class="m">11px</span><span class="o">/</span><span class="m">1</span><span class="o">.</span><span class="m">2</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.big</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="o">:</span> <span class="m">15px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"arial big"</span><span class="nt">&gt;</span>Big Font<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"arial"</span><span class="nt">&gt;</span>Normal Font<span class="nt">&lt;/h2&gt;</span>
+</pre></div>
+
+<h3>
+<a name="right-way" class="anchor" href="#right-way"><span class="octicon octicon-link"></span></a>Right Way</h3>
+
+<div class="highlight"><pre><span class="nc">.header</span><span class="o">,</span>
+<span class="nc">.title</span> <span class="p">{</span>
+  <span class="k">font</span><span class="o">:</span> <span class="k">normal</span> <span class="m">11px</span><span class="o">/</span><span class="m">1</span><span class="o">.</span><span class="m">2</span> <span class="n">Arial</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="k">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.title</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="o">:</span> <span class="m">15px</span>
+<span class="p">}</span>
+</pre></div>
+
+<div class="highlight"><pre><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Big Font<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>Normal Font<span class="nt">&lt;/h2&gt;</span>
+</pre></div>
+
+<h2>
+<a name="scoping-css" class="anchor" href="#scoping-css"><span class="octicon octicon-link"></span></a>Scoping CSS</h2>
+
+<div class="highlight"><pre><span class="nt">&lt;html</span> <span class="na">class=</span><span class="s">"factoryBranding"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"/factory.war/stylesheets/brandstyles.css"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>My Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+<p>No need to scope if CSS is only used within scoped element</p>
+
+<h3>
+<a name="wrong-way-1" class="anchor" href="#wrong-way-1"><span class="octicon octicon-link"></span></a>Wrong Way</h3>
+
+<div class="highlight"><pre><span class="nc">.factoryBranding</span> <span class="nc">.button</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>
+<a name="right-way-1" class="anchor" href="#right-way-1"><span class="octicon octicon-link"></span></a>Right Way</h3>
+
+<div class="highlight"><pre><span class="nc">.button</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2>
+<a name="selector-depth" class="anchor" href="#selector-depth"><span class="octicon octicon-link"></span></a>Selector Depth</h2>
+
+<div class="highlight"><pre><span class="nc">.main-nav</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="nt">ul</span> <span class="nt">li</span> <span class="nt">div</span> <span class="p">{</span>
+  <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Stay away from complex selectors</p>
+
+<h3>
+<a name="this-will-become-increasingly-important-when-using-css-pre-processors-like-stylus" class="anchor" href="#this-will-become-increasingly-important-when-using-css-pre-processors-like-stylus"><span class="octicon octicon-link"></span></a>This will become increasingly important when using CSS pre-processors like Stylus</h3>
+
+<pre lang="styl"><code>.main-nav
+  ul
+    li
+      ul
+        li
+          div
+</code></pre>
+
+<h3>
+<a name="undoing-styles" class="anchor" href="#undoing-styles"><span class="octicon octicon-link"></span></a>Undoing Styles</h3>
+
+<p>Don't do it.  If this is necessary, then there is probably something wrong with your original style.</p>
+
+<h3>
+<a name="other-bad-ideas" class="anchor" href="#other-bad-ideas"><span class="octicon octicon-link"></span></a>Other Bad Ideas</h3>
+
+<ul>
+<li>Stay away from !important</li>
+<li>Don't use ID's for styling</li>
+<li>Don't prepend selectors with elements</li>
+</ul><h3>
+<a name="css-selector-profile" class="anchor" href="#css-selector-profile"><span class="octicon octicon-link"></span></a>CSS Selector Profile</h3>
+
+<ol>
+<li>Open Webkit</li>
+<li>Select the Profile tab</li>
+<li>Select Collect CSS Selector Profile and click Start</li>
+<li>Load the page and click Stop</li>
+<li>Select your profile on the left</li>
+</ol><h1>
+<a name="mobile-first-css" class="anchor" href="#mobile-first-css"><span class="octicon octicon-link"></span></a>Mobile First CSS</h1>
+
+<ol>
+<li>What will your styles look like on a mobile platform?</li>
+<li>What could you do to improve the mobile experience?</li>
+<li>Are these changes feasible?</li>
+</ol><h2>
+<a name="media" class="anchor" href="#media"><span class="octicon octicon-link"></span></a><a href="https://github.com/media" class="user-mention">@media</a>
+</h2>
+
+<p>Try basing media queries off of content instead of device display size</p>
+
+<h2>
+<a name="flexbox" class="anchor" href="#flexbox"><span class="octicon octicon-link"></span></a>flexbox</h2>
+
+<p>Try using flexbox for grid layouts</p>
+
+<p><a href="http://codepen.io/HugoGiraudel/embed/6448fc51f994a029be1facb87afe3b5c?type=result&amp;height=300&amp;safe=true#result-box">Example</a></p>
+
+<h1>
+<a name="stylus" class="anchor" href="#stylus"><span class="octicon octicon-link"></span></a>Stylus</h1>
+
+<p><a href="http://learnboost.github.io/stylus/">http://learnboost.github.io/stylus/</a></p>
+
+<p><a href="http://visionmedia.github.io/nib/">http://visionmedia.github.io/nib/</a></p>
+
+<h1>
+<a name="stylus-manifests" class="anchor" href="#stylus-manifests"><span class="octicon octicon-link"></span></a>Stylus Manifests</h1>
+
+<h3>
+<a name="old-manifest" class="anchor" href="#old-manifest"><span class="octicon octicon-link"></span></a>Old Manifest</h3>
+
+<p>/manifest/webcommon/category.json</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">"src"</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">"&lt;%= common_css %&gt;category/category.css"</span><span class="p">,</span>
+    <span class="s2">"&lt;%= common_css %&gt;category/brandstyles.css"</span><span class="p">,</span>
+    <span class="s2">"&lt;%= common_css %&gt;category/widget.css"</span>
+  <span class="p">],</span>
+  <span class="nt">"dest"</span><span class="p">:</span> <span class="s2">"&lt;%= common_css %&gt;category/min/category.css"</span>
+<span class="p">}</span>
+
+</pre></div>
+
+<h3>
+<a name="new-manifest" class="anchor" href="#new-manifest"><span class="octicon octicon-link"></span></a>New Manifest</h3>
+
+<p>/webcommon.war/stylesheets/category/category.css</p>
+
+<pre lang="styl"><code>@import category
+@import brandstyles
+@import widget
+</code></pre>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/scott0707">scott0707</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
