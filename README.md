@@ -69,7 +69,7 @@ Make sure far right element is specific.
 
 ```html
 <html class="factoryBranding">
-  <link href="/factory.war/stylesheets/brandstyles.css"/>
+  <link href="/factory/stylesheets/brandstyles.css"/>
   <a class="button">My Button</a>
 </html>
 ```
